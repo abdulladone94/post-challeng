@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%> 
+
+<h1>HOME</h1>
+<p><%= startingContent %> </p>
+<!-- console.log(postDetails);          use <%  %>  run the code -->
+
+<!-- for (var i=0; i<postDetails.length; i++){    use <%  %>  run the code
+    console.log(postDetails[i].titel);}   -->
+ 
+
+<!-- postDetails.forEach(function(postItem){        use <%  %>  run the code
+    console.log(postItem.titel);})  -->
+
+
+<% postDetails.forEach(function(postItem){ %>
+    <h1><%= postItem.titel %>  </h1>
+    <P><%= postItem.detail %> </P>
+    <% }) %>
+
+<%- include("partials/footer"); -%> 
